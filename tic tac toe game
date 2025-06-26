@@ -1,0 +1,228 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	char arr[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+	int turn1,turn2;
+	char P1='X';
+	char P2='O';
+cout<<"\"TIC-TAC-TOE Game by Group2\"\n\n";
+cout<<"   TIC-TAC-TOE \n";
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[0][0]<<"     "<<arr[0][1]<<"     "<<arr[0][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[1][0]<<"      "<<arr[1][1]<<"     "<<arr[1][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[2][0]<<"      "<<arr[2][1]<<"     "<<arr[2][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+for(int i=0;i<5;i++){
+	cout<<"Player 1(X) turn,Enter between (1-9):";
+	cin>>turn1;
+	if(turn1>=1&&turn1<=9){
+	if(turn2!=turn1){
+	if(turn1==1)
+	arr[0][0]=P1;
+	else if(turn1==2)
+	arr[0][1]=P1;
+	else if(turn1==3)
+	arr[0][2]=P1;
+	else if(turn1==4)
+	arr[1][0]=P1;
+	else if(turn1==5)
+	arr[1][1]=P1;
+	else if(turn1==6)
+	arr[1][2]=P1;
+	else if(turn1==7)
+	arr[2][0]=P1;
+	else if(turn1==8)
+	arr[2][1]=P1;
+	else
+	arr[2][2]=P1;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[0][0]<<"     "<<arr[0][1]<<"     "<<arr[0][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[1][0]<<"      "<<arr[1][1]<<"     "<<arr[1][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[2][0]<<"      "<<arr[2][1]<<"     "<<arr[2][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+}
+else{
+while(turn2==turn1){
+cout<<"No Repetition again turn of Player 1:";
+cin>>turn1;}
+    if(turn1==1)
+	arr[0][0]=P1;
+	else if(turn1==2)
+	arr[0][1]=P1;
+	else if(turn1==3)
+	arr[0][2]=P1;
+	else if(turn1==4)
+	arr[1][0]=P1;
+	else if(turn1==5)
+	arr[1][1]=P1;
+	else if(turn1==6)
+	arr[1][2]=P1;
+	else if(turn1==7)
+	arr[2][0]=P1;
+	else if(turn1==8)
+	arr[2][1]=P1;
+	else
+	arr[2][2]=P1;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[0][0]<<"     "<<arr[0][1]<<"     "<<arr[0][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[1][0]<<"      "<<arr[1][1]<<"     "<<arr[1][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[2][0]<<"      "<<arr[2][1]<<"     "<<arr[2][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+}
+}
+else
+{
+cout<<"Invalid input ";
+ break;
+}
+if(arr[0][0]==arr[0][1]&&arr[0][0]==arr[0][2]||arr[1][0]==arr[1][1]&&arr[1][0]==arr[1][2]||arr[2][0]==arr[2][1]&&arr[2][0]==arr[2][2])
+{
+	cout<< "X wins";
+	break;
+}
+ if(arr[0][0]==arr[1][0]&&arr[0][0]==arr[2][0]||arr[0][1]==arr[1][1]&&arr[0][1]==arr[2][1]||arr[0][2]==arr[1][2]&&arr[0][2]==arr[2][2])
+{
+	cout<< "X wins";
+	break;
+}
+ if(arr[0][0]==arr[1][1]&&arr[0][0]==arr[2][2]||arr[0][2]==arr[1][1]&&arr[0][2]==arr[2][0])
+{
+	cout<< "X wins";
+	break;
+}
+//Match draw and ending iterations 
+if(i==4)
+{
+if(arr[0][0]!=arr[0][1]&&arr[0][0]!=arr[0][2]||arr[1][0]!=arr[1][1]&&arr[1][0]!=arr[1][2]||arr[2][0]!=arr[2][1]&&arr[2][0]!=arr[2][2]||arr[0][0]!=arr[1][0]&&arr[0][0]!=arr[2][0]||arr[0][1]!=arr[1][1]&&arr[0][1]!=arr[2][1]||arr[0][2]!=arr[1][2]&&arr[0][2]!=arr[2][2]||arr[0][0]!=arr[1][1]&&arr[0][0]!=arr[2][2]||arr[0][2]!=arr[1][1]&&arr[0][2]!=arr[2][0])
+cout<<"match tie";
+break;
+}
+	cout<<"Player 2(O) turn,Enter between (1-9)):";
+	cin>>turn2;
+	if(turn2>=1 && turn2<=9){
+	if(turn1!=turn2){
+	if(turn2==1)
+	arr[0][0]=P2;
+	else if(turn2==2)
+	arr[0][1]=P2;
+	else if(turn2==3)
+	arr[0][2]=P2;
+	else if(turn2==4)
+	arr[1][0]=P2;
+	else if(turn2==5)
+	arr[1][1]=P2;
+	else if(turn2==6)
+	arr[1][2]=P2;
+	else if(turn2==7)
+	arr[2][0]=P2;
+	else if(turn2==8)
+	arr[2][1]=P2;
+	else
+	arr[2][2]=P2;
+	
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[0][0]<<"     "<<arr[0][1]<<"     "<<arr[0][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[1][0]<<"      "<<arr[1][1]<<"     "<<arr[1][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[2][0]<<"      "<<arr[2][1]<<"     "<<arr[2][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+
+}
+else{
+while(turn1==turn2){
+cout<<"No repetition, again turn of Player 2:";
+cin>>turn2;}
+    if(turn2==1)
+	arr[0][0]=P2;
+	else if(turn2==2)
+	arr[0][1]=P2;
+	else if(turn2==3)
+	arr[0][2]=P2;
+	else if(turn2==4)
+	arr[1][0]=P2;
+	else if(turn2==5)
+	arr[1][1]=P2;
+	else if(turn2==6)
+	arr[1][2]=P2;
+	else if(turn2==7)
+	arr[2][0]=P2;
+	else if(turn2==8)
+	arr[2][1]=P2;
+	else
+	arr[2][2]=P2;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[0][0]<<"     "<<arr[0][1]<<"     "<<arr[0][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[1][0]<<"      "<<arr[1][1]<<"     "<<arr[1][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"   "<<arr[2][0]<<"      "<<arr[2][1]<<"     "<<arr[2][2]<<endl;
+cout<<"|     |     |     |"<<endl;
+cout<<"-------------------"<<endl;
+}
+}
+else
+{
+cout<<"Invalid input";
+break;
+}
+//Winning conditions
+if(arr[0][0]==arr[0][1]&&arr[0][0]==arr[0][2]||arr[1][0]==arr[1][1]&&arr[1][0]==arr[1][2]||arr[2][0]==arr[2][1]&&arr[2][0]==arr[2][2])
+{
+	cout<< "o wins";
+	break;
+}
+ if(arr[0][0]==arr[1][0]&&arr[0][0]==arr[2][0]||arr[0][1]==arr[1][1]&&arr[0][1]==arr[2][1]||arr[0][2]==arr[1][2]&&arr[0][2]==arr[2][2])
+{
+	cout<< "o wins";
+	break;
+}
+ if(arr[0][0]==arr[1][1]&&arr[0][0]==arr[2][2]||arr[0][2]==arr[1][1]&&arr[0][2]==arr[2][0])
+{
+	cout<< "o wins";
+	break;
+}
+}
+return 0;
+}
+
+
+
+
+
